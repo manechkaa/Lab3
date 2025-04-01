@@ -1,6 +1,12 @@
 #include <iostream>
 
+void NewMemory() {
+    while(1) {
+        int *a = new int(1);
+    }
+}
+
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    NewMemory();
     return 0;
 }
