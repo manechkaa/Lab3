@@ -51,7 +51,7 @@ build cmake_object_order_depends_target_Lab3: phony || .
 
 build CMakeFiles/Lab3.dir/main.cpp.obj: CXX_COMPILER__Lab3_unscanned_Debug C$:/Users/Professional/CLionProjects/Lab3/main.cpp || cmake_object_order_depends_target_Lab3
   DEP_FILE = CMakeFiles\Lab3.dir\main.cpp.obj.d
-  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  FLAGS = -g -std=gnu++2a -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Lab3.dir
   OBJECT_FILE_DIR = CMakeFiles\Lab3.dir
 

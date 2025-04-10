@@ -1,4 +1,4 @@
-ToolSet: 11.0 w64 (local)@C:\Program Files\JetBrains\CLion2024.2\bin\mingw
+ToolSet: 6.0 w64 (local)@C:\Program Files\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64
 Ninja: 1.12.0@C:\Program Files\JetBrains\CLion2024.2\bin\ninja\win\x64\ninja.exe
 Options: 
 
