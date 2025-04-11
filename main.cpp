@@ -1,5 +1,6 @@
 #include <iostream>
 #include <memory>
+#include <vector>
 
 void Task1() {
     for (int i = 0; i < 1e8 * 5; i++) {
@@ -13,6 +14,26 @@ void Task2() {
         auto safePtr = std::make_unique<int>(1);
     }
 }
+
+class MyClass {
+public:
+    MyClass() : data(nullptr){}
+    explicit MyClass(int s) : data(std::make_unique<int>(s)){};
+    MyClass& operator=(const MyClass& a) {
+        data = std::make_unique<int>(*a.data);
+    }
+    ~MyClass() = default;
+
+    std::string check_status() {
+        if (data == nullptr)
+            return "Error";
+        else
+            return "OK";
+    }
+
+private:
+    std::unique_ptr<int> data;
+};
 
 void fortask3(std::shared_ptr<int> &a, int p = 0) {
     if (p == 200) return;
@@ -43,12 +64,13 @@ void Task4() {
     if (auto locked = weak.lock()) {
         std::cout << "alive: " << *locked << std::endl;
     } else {
-        std::cout << "dead" << std::endl;  // Выведется это
+        std::cout << "dead" << std::endl;
     }
 }
 
 int main() {
     Task4();
+
 
     return 0;
 }
